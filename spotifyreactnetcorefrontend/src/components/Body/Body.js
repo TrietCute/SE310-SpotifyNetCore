@@ -9,12 +9,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useTabPanel } from '@mui/base';
-//canciones recientemente escuchadas
+
 const Body = () => {
   const [rect, setRect] = useState([])
-    //const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("")
 
-    //funcion para traer los datos de la Api
+ 
     const showData = async () => {
         const response = await fetch('home/RecentlyPlayedTracks')
         const data = await response.json()
@@ -30,7 +30,7 @@ const Body = () => {
         showData()
     }, [])
 
-//Ultimos Lanzamientos
+
 const [ults, setUlts] = useState([])
 
     const showUlt = async () => {
@@ -45,7 +45,7 @@ const [ults, setUlts] = useState([])
         showUlt()
     }, [])
 
-//Artistas que sigues
+
 const [FollowArts, setFollowArts] = useState([])
 
     const showFollow = async () => {
@@ -65,7 +65,7 @@ const [FollowArts, setFollowArts] = useState([])
   return (
     <BodyContainer>
         <Header/>
-        <Tittle>Escuchado Recientemente</Tittle>
+          <Tittle>Recently Listened</Tittle>
         <Flex>
         {rect.map((track) => (
     
@@ -88,7 +88,7 @@ const [FollowArts, setFollowArts] = useState([])
             ))}
         </Flex>
         
-        <Tittle>Ultimos Lanzamientos</Tittle>
+        <Tittle>Latest Releases</Tittle>
         <Flex>
         {ults.map((ult) => (
             <DIV2 key={ult.id}>
@@ -108,7 +108,7 @@ const [FollowArts, setFollowArts] = useState([])
             ))}
         </Flex>
 
-        <Tittle>Artistas Que Sigues</Tittle>
+        <Tittle>Artist You Follow</Tittle>
             <Flex>
             {FollowArts.map((Follow) => (
                 <DIV2 key={Follow.id}>

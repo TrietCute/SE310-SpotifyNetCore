@@ -22,9 +22,7 @@ const RecienteEsc = () => {
         showRec()
     }, [])
 
-    //funcion para traer los datos de la Api
 
-    //Usar playlist
   const [playlists, setPlaylists] = useState([])
 
   const showPlay = async () => {

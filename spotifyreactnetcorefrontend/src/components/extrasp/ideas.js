@@ -2,8 +2,8 @@
             <table className='table table-striped table-hover mt-5 shadow-lg'>
                 <thead>
                     <tr className='bg-curso text-white'>
-                        <th>Nombre</th>
-                        <th>Artista</th>
+                        <th>Name</th>
+                        <th>Artist</th>
                         <th>Album</th>
                         <th></th>
                     </tr>

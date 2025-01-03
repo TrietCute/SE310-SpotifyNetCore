@@ -50,4 +50,4 @@ const DIV = styled.div`
   }
 `
 
-export {SidebarContainer, Playlist, Choices,DIV}
+export { SidebarContainer, Playlist, Choices, DIV }

@@ -5,9 +5,7 @@ import {useState, useEffect} from 'react'
 
 const Header = () => {
   const [users, setUsers] = useState([])
-    //const [search, setSearch] = useState("")
 
-    //funcion para traer los datos de la Api
 
     const showData = async () => {
         const response = await fetch('home/GetUserID')

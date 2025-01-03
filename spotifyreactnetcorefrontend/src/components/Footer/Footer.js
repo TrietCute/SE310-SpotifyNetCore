@@ -14,20 +14,15 @@ import Typography from '@mui/material/Typography';
 
 const Footer = () => {
   const [tracks, setTracks] = useState([])
-    //const [search, setSearch] = useState("")
+ 
 
-    //funcion para traer los datos de la Api
 
     const showData2 = async () => {
         const response = await fetch('home/CurrentlyPlayingTrack')
         const data = await response.json()
         setTracks(data)
     }
-    //showData() => {Bucle de datos}
 
-    //Metodo de filtrado
-
-    //funcion de busqueda
     useEffect(() => {
         showData2()
     }, [])

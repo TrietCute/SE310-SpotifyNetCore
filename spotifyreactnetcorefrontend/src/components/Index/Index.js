@@ -1,10 +1,7 @@
 import {useState, useEffect} from 'react'
 const Index = () => {
-    //setear los hooks useState
     const [users, setUsers] = useState([])
-    //const [search, setSearch] = useState("")
 
-    //funcion para traer los datos de la Api
 
     const showData = async () => {
         const response = await fetch('home/followedartists')
@@ -13,16 +10,10 @@ const Index = () => {
         console.log(fetch('home/index'))
         console.log(data)
     }
-    //showData() => {Bucle de datos}
-    
-    //Metodo de filtrado
 
-    //funcion de busqueda
     useEffect(() => {
         showData()
     }, [])
-
-    //renderizamos la vista
 
     return (
         <div>
