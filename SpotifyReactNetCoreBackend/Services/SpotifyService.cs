@@ -56,7 +56,6 @@ namespace SpotifyReactNetCoreBackend.Services
         }
 
         public async Task<IEnumerable<UserPlaylists>> GetUserPlaylist(string accessToken)
-        //image,musica, artista
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, "me/playlists");
@@ -77,7 +76,6 @@ namespace SpotifyReactNetCoreBackend.Services
             );
         }
         public async Task<IEnumerable<RecentlyPlayedTracks>> GetRecentlyPlayedTracks(string accessToken)
-        //image,musica, artista
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "me/player/recently-played");
 
@@ -100,7 +98,6 @@ namespace SpotifyReactNetCoreBackend.Services
         }
 
         public async Task<CurrentlyPlayingTrack> GetCurrentlyPlayingTrack(string accessToken)
-        //image,musica, artista
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "me/player/currently-playing");
 
@@ -122,7 +119,6 @@ namespace SpotifyReactNetCoreBackend.Services
         }
 
         public async Task<IEnumerable<FollowedArtists>> GetFollowedArtists(string accessToken, int limit)
-        //image,musica, artista
         {
             var request = new HttpRequestMessage(HttpMethod.Get, $"me/following?type=artist&limit={limit}");
 
@@ -143,7 +139,6 @@ namespace SpotifyReactNetCoreBackend.Services
 
         
         public async Task<IEnumerable<PlaylistItems>> GetPlaylistTracks(string accessToken, string idplaylist)
-        //image,musica, artista
         {
             var request = new HttpRequestMessage(HttpMethod.Get, $"playlists/{idplaylist}/tracks");
 
